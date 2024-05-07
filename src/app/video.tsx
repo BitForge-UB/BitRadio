@@ -40,7 +40,7 @@ export const Video: React.FC<VideoProps> = ({ curRadio, setCurRadio }) => {
       clearInterval(adInterval);
       audio.pause();
     };
-  }, []);
+  }, [ad, audio, setCurRadio, songs.length]);
 
   const playVideo = () => {
     const video = document.querySelector("video");
